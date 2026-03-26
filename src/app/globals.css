@@ -7,6 +7,10 @@
   --orange-glow: rgba(255, 90, 31, 0.2);
   --chalk: #f5f0e8;
 
+  /* NBA palette accents (approx.) */
+  --nba-red: #c8102e;
+  --nba-blue: #1d428a;
+
   --gray-950: #0a0a0a;
   --gray-900: #111111;
   --gray-800: #1c1c1c;
@@ -22,6 +26,9 @@
   /* Brand tokens: bare `orange` / `chalk` utilities (e.g. bg-orange, text-chalk) */
   --color-orange: #ff5a1f;
   --color-chalk: #f5f0e8;
+  /* NBA utility colors: e.g. bg-nba-red, text-nba-blue */
+  --color-nba-red: var(--nba-red);
+  --color-nba-blue: var(--nba-blue);
 }
 
 html,
@@ -128,5 +135,17 @@ body::before {
       transparent 1px,
       transparent 60px
     );
+}
+
+/* NBA-style accent ribbons */
+.nba-ribbon {
+  background: linear-gradient(90deg, var(--nba-blue), var(--nba-red));
+}
+.nba-ribbon-soft {
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--nba-blue) 55%, transparent),
+    color-mix(in srgb, var(--nba-red) 55%, transparent)
+  );
 }
 

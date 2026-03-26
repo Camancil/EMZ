@@ -8,6 +8,7 @@ import { AGENDAPRO_RESERVAS_URL } from "@/lib/site";
 import CourtLines from "@/components/basketball/CourtLines";
 import BasketballSVG from "@/components/basketball/BasketballSVG";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
+import PartnerMarks from "@/components/ui/PartnerMarks";
 
 const stats = [
   { value: 5, label: "Áreas", prefix: "", suffix: "" },
@@ -19,6 +20,14 @@ const stats = [
 export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-24">
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-[3px] nba-ribbon opacity-80"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute inset-x-0 top-[3px] h-24 nba-ribbon-soft opacity-60 blur-xl"
+        aria-hidden="true"
+      />
       <div className="absolute inset-0 court-grid opacity-100" aria-hidden="true" />
 
       <CourtLines variant="threepoint" />
@@ -120,6 +129,9 @@ export default function Hero() {
               className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent md:from-black/55"
               aria-hidden="true"
             />
+            <div className="absolute left-5 top-5 md:left-6 md:top-6">
+              <PartnerMarks className="scale-[1.15] origin-top-left md:scale-[1.25]" />
+            </div>
             <div className="absolute bottom-5 left-5 right-5 md:bottom-8 md:left-8 md:right-auto">
               <Link
                 href="/cancha"
