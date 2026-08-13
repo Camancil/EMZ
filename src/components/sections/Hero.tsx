@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
-import { AGENDAPRO_RESERVAS_URL } from "@/lib/site";
+import { WHATSAPP_URL } from "@/lib/site";
 import CourtLines from "@/components/basketball/CourtLines";
 import BasketballSVG from "@/components/basketball/BasketballSVG";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
@@ -77,7 +77,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.35 }}
             className="mt-6 flex flex-wrap gap-3"
           >
-            <Button href={AGENDAPRO_RESERVAS_URL} variant="primary">
+            <Button href={WHATSAPP_URL} variant="primary">
               RESERVAR CANCHA →
             </Button>
             <Button href="#servicios" variant="outline">

@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageTransition from "@/components/layout/PageTransition";
+import WhatsAppBubble from "@/components/layout/WhatsAppBubble";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://emzsportandfitness.cl";
 
@@ -49,6 +50,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
+        <WhatsAppBubble />
       </body>
     </html>
   );

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import BasketballSVG from "@/components/basketball/BasketballSVG";
 import CourtLines from "@/components/basketball/CourtLines";
-import { AGENDAPRO_RESERVAS_URL } from "@/lib/site";
+import { WHATSAPP_URL } from "@/lib/site";
 
 const services = [
   {
@@ -223,16 +223,16 @@ export default function ServicesGrid() {
         <div className="relative z-10 mt-10 rounded-2xl border border-[rgba(255,90,31,0.15)] bg-[rgba(255,90,31,0.04)] px-6 py-5">
           <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
             <div className="font-mono text-sm text-gray-200">
-              ¿Quieres reservar tu sesión? Elige fecha y horario en AgendaPro.
+              ¿Quieres reservar tu sesión? Escríbenos por WhatsApp.
             </div>
             <div className="mt-2 flex items-center gap-3">
               <Link
-                href={AGENDAPRO_RESERVAS_URL}
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-display tracking-wide text-orange hover:text-chalk transition-colors"
               >
-                Reservar en AgendaPro →
+                RESERVAR →
               </Link>
             </div>
           </div>

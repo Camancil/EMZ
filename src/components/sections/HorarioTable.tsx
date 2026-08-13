@@ -1,6 +1,6 @@
 import Link from "next/link";
 import CourtLines from "@/components/basketball/CourtLines";
-import { AGENDAPRO_RESERVAS_URL } from "@/lib/site";
+import { WHATSAPP_URL } from "@/lib/site";
 import BasketballSVG from "@/components/basketball/BasketballSVG";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
 
@@ -43,7 +43,7 @@ export default function HorarioTable() {
               </h2>
             </div>
             <Link
-              href={AGENDAPRO_RESERVAS_URL}
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="font-mono text-xs text-gray-400 hover:text-orange transition-colors"
@@ -96,12 +96,12 @@ export default function HorarioTable() {
                 Lunes a Sábado: 09:00–21:30 · Domingo cerrado
               </div>
               <Link
-                href={AGENDAPRO_RESERVAS_URL}
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-display tracking-wide text-orange hover:text-chalk transition-colors"
               >
-                AgendaPro →
+                RESERVAR →
               </Link>
             </div>
           </div>

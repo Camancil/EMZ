@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { AGENDAPRO_RESERVAS_URL, EMZ_ADDRESS } from "@/lib/site";
+import { EMZ_ADDRESS, EMZ_PHONE_DISPLAY, WHATSAPP_URL } from "@/lib/site";
 
 export default function Footer() {
-  const phone = "+56 9 9596 7873";
 
   return (
     <footer className="relative z-10 border-t border-[rgba(255,90,31,0.15)] bg-black/40">
@@ -26,8 +25,8 @@ export default function Footer() {
             </div>
             <div>
               <span className="font-mono text-gray-400">Teléfono: </span>
-              <a className="hover:text-orange transition-colors" href={`tel:${phone}`}>
-                {phone}
+              <a className="hover:text-orange transition-colors" href={`tel:${EMZ_PHONE_DISPLAY}`}>
+                {EMZ_PHONE_DISPLAY}
               </a>
             </div>
             <div>
@@ -38,12 +37,12 @@ export default function Footer() {
 
           <div className="flex flex-col gap-3 text-sm">
             <Link
-              href={AGENDAPRO_RESERVAS_URL}
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full border border-[rgba(255,90,31,0.4)] px-5 py-3 text-center font-display tracking-wide text-chalk hover:text-orange transition-colors"
             >
-              AgendaPro
+              RESERVAR
             </Link>
             <Link
               href="https://instagram.com/emzsportandfitness"

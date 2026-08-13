@@ -1,9 +1,6 @@
 import Link from "next/link";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
-import { AGENDAPRO_RESERVAS_URL } from "@/lib/site";
-import ContactForm from "@/components/sections/ContactForm";
-
-const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP;
+import { WHATSAPP_URL } from "@/lib/site";
 
 export default function CtaSection() {
   return (
@@ -25,19 +22,12 @@ export default function CtaSection() {
 
             <div className="flex flex-wrap gap-3">
               <Link
-                href={AGENDAPRO_RESERVAS_URL}
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-orange px-6 py-3 text-black font-display tracking-wide hover:scale-[1.03] transition-transform"
               >
                 RESERVAR
-              </Link>
-              <Link
-                href={whatsapp ? `https://wa.me/${whatsapp}` : "https://wa.me/"}
-                target="_blank"
-                className="rounded-full border border-[rgba(255,90,31,0.7)] px-6 py-3 font-display tracking-wide text-chalk hover:bg-[rgba(255,90,31,0.08)] hover:scale-[1.03] transition-transform"
-              >
-                WHATSAPP →
               </Link>
             </div>
           </div>
@@ -55,45 +45,7 @@ export default function CtaSection() {
             </div>
           </div>
         </RevealOnScroll>
-
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
-          <RevealOnScroll delayMs={140}>
-            <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
-              <div className="font-display text-orange text-[24px]">Pregunta sin miedo</div>
-              <p className="mt-2 text-sm text-gray-200">
-                Reserva tu cancha o consulta por reintegro, entrenamiento, sicología y
-                nutrición deportiva. Te orientamos para que tu plan tenga sentido.
-              </p>
-
-              <ul className="mt-5 space-y-3 text-sm">
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-orange" />
-                  <span className="text-gray-200">
-                    Confirmación de disponibilidad por API con Supabase.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-orange" />
-                  <span className="text-gray-200">
-                    Slots con “ocupados” respetando reservas y bloqueos.
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1 h-2 w-2 rounded-full bg-orange" />
-                  <span className="text-gray-200">
-                    Seguimiento y ajuste continuo en tu evolución.
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </RevealOnScroll>
-
-          <RevealOnScroll delayMs={180}>
-            <ContactForm />
-          </RevealOnScroll>
-        </div>
       </div>
     </section>
   );
 }
-

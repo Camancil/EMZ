@@ -1,9 +1,20 @@
-/** Reserva de cancha (AgendaPro). */
-export const AGENDAPRO_RESERVAS_URL =
-  "https://agendapro.com/site/cl/emzsportandfitness/417453";
-
 /** Dirección física (una sola fuente de verdad para mapa y footer). */
 export const EMZ_ADDRESS = "Pedro Hemrick Ling 782, Ñuñoa, Santiago, Chile";
+
+/** Teléfono de contacto (display). */
+export const EMZ_PHONE_DISPLAY = "+56 9 9596 7873";
+
+const whatsappDigits = (process.env.NEXT_PUBLIC_WHATSAPP ?? "56995967873").replace(
+  /\D/g,
+  "",
+);
+
+const whatsappText = encodeURIComponent(
+  "Hola, quiero reservar en EMZ Sport & Fitness",
+);
+
+/** Chat de WhatsApp con mensaje inicial. */
+export const WHATSAPP_URL = `https://wa.me/${whatsappDigits}?text=${whatsappText}`;
 
 const addressQuery = encodeURIComponent(EMZ_ADDRESS);
 

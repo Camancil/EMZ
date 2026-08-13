@@ -6,7 +6,7 @@ import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Button from "@/components/ui/Button";
-import { AGENDAPRO_RESERVAS_URL } from "@/lib/site";
+import { WHATSAPP_URL } from "@/lib/site";
 import ScoreBug from "@/components/basketball/ScoreBug";
 
 const links = [
@@ -76,7 +76,7 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="ml-2">
-            <Button href={AGENDAPRO_RESERVAS_URL} variant="primary">
+            <Button href={WHATSAPP_URL} variant="primary">
               RESERVAR
             </Button>
           </div>
@@ -84,7 +84,7 @@ export default function Navbar() {
 
         <div className="flex items-center md:hidden">
           <Button
-            href={AGENDAPRO_RESERVAS_URL}
+            href={WHATSAPP_URL}
             variant="primary"
             className="px-4 py-2 h-10 text-[13px]"
           >
@@ -153,7 +153,7 @@ export default function Navbar() {
                 ))}
 
                 <div className="mt-2">
-                  <Button href={AGENDAPRO_RESERVAS_URL} variant="primary" className="w-full">
+                  <Button href={WHATSAPP_URL} variant="primary" className="w-full">
                     RESERVAR
                   </Button>
                 </div>
