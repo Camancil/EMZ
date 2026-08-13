@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { EMZ_ADDRESS, EMZ_PHONE_DISPLAY, WHATSAPP_URL } from "@/lib/site";
+import { EMZ_ADDRESS, EMZ_PHONE_DISPLAY, INSTAGRAM_URL, WHATSAPP_URL } from "@/lib/site";
 
 export default function Footer() {
 
@@ -13,16 +13,16 @@ export default function Footer() {
               <span className="text-orange">SPORT</span>
             </div>
             <p className="mt-4 text-sm text-gray-200">
-              Cultura basketball en Ñuñoa: arriendo 3x3, reintegro, entrenamiento,
-              sicología y nutrición deportiva.
+              Cancha de basketball y básquetbol en Ñuñoa, Santiago. Cancha oficial
+              3x3, entrenamiento personalizado y entrenador de básquetbol.
             </p>
           </div>
 
           <div className="grid gap-2 text-sm text-gray-200">
-            <div>
+            <address className="not-italic">
               <span className="font-mono text-gray-400">Dirección: </span>
               {EMZ_ADDRESS}
-            </div>
+            </address>
             <div>
               <span className="font-mono text-gray-400">Teléfono: </span>
               <a className="hover:text-orange transition-colors" href={`tel:${EMZ_PHONE_DISPLAY}`}>
@@ -33,6 +33,9 @@ export default function Footer() {
               <span className="font-mono text-gray-400">Horario: </span>
               <span>Lun–Sáb 09:00–21:30 / Domingo cerrado</span>
             </div>
+            <Link href="/cancha" className="mt-1 hover:text-orange transition-colors">
+              Cancha de basketball Ñuñoa →
+            </Link>
           </div>
 
           <div className="flex flex-col gap-3 text-sm">
@@ -45,8 +48,9 @@ export default function Footer() {
               RESERVAR
             </Link>
             <Link
-              href="https://instagram.com/emzsportandfitness"
+              href={INSTAGRAM_URL}
               target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full border border-white/10 bg-white/[0.02] px-5 py-3 text-center font-display tracking-wide text-chalk hover:text-orange transition-colors"
             >
               Instagram: @emzsportandfitness

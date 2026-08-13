@@ -37,10 +37,10 @@ export default function CtaSection() {
           <div className="w-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-3">
             <div className="flex whitespace-nowrap animate-[marquee_18s_linear_infinite] text-gray-200">
               <span className="font-mono text-xs mr-12">
-                🏀 CANCHA 3x3 • REINTEGRO • BOX • MENTE GANADORA • NUTRICIÓN •
+                🏀 CANCHA BASKETBALL ÑUÑOA • OFICIAL 3x3 • SANTIAGO • ENTRENADOR BÁSQUETBOL •
               </span>
               <span className="font-mono text-xs mr-12">
-                🏀 CANCHA 3x3 • REINTEGRO • BOX • MENTE GANADORA • NUTRICIÓN •
+                🏀 CANCHA BASKETBALL ÑUÑOA • OFICIAL 3x3 • SANTIAGO • ENTRENADOR BÁSQUETBOL •
               </span>
             </div>
           </div>

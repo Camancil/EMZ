@@ -5,21 +5,21 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import BasketballSVG from "@/components/basketball/BasketballSVG";
 import CourtLines from "@/components/basketball/CourtLines";
-import { WHATSAPP_URL } from "@/lib/site";
+import { WHATSAPP_URL, whatsappUrl } from "@/lib/site";
 
 const services = [
   {
     num: "01",
-    href: "/cancha",
     title: "CANCHA 3×3",
+    infoName: "Cancha 3x3",
     emoji: "🏀",
     color: "#FF5A1F",
-    subtitle: "Arriendo techado + cultura streetball",
+    subtitle: "Cancha oficial 3x3 en Ñuñoa",
     description:
-      "Cancha techada con iluminación LED. Disponible para arriendo libre, sesiones personalizadas y clases grupales.",
+      "Cancha de basketball y básquetbol techada en Santiago. Arriendo de cancha oficial 3x3, sesiones con entrenador y clases grupales.",
     items: [
-      "Arriendo libre por hora",
-      "Sesiones personalizadas con entrenador",
+      "Arriendo de cancha en Ñuñoa",
+      "Sesiones con entrenador de básquetbol",
       "Clases grupales (mín. 4 personas)",
     ],
     details: [
@@ -30,8 +30,8 @@ const services = [
   },
   {
     num: "02",
-    href: "/reintegro",
     title: "REINTEGRO DEPORTIVO",
+    infoName: "Reintegro Deportivo",
     emoji: "🩺",
     color: "#3B82F6",
     subtitle: "Vuelve al juego de forma segura",
@@ -46,25 +46,25 @@ const services = [
   },
   {
     num: "03",
-    href: "/entrenamiento",
     title: "ENTRENAMIENTO FÍSICO",
+    infoName: "Entrenamiento Físico",
     emoji: "💪",
     color: "#10B981",
-    subtitle: "Alto rendimiento para todos",
+    subtitle: "Entrenamiento personalizado",
     description:
-      "Entrenamiento con foco en fuerza, potencia, acondicionamiento y preparación física según tu nivel y objetivos.",
+      "Entrenador de básquetbol y preparación física en Santiago. Entrenamiento personalizado de fuerza, potencia y técnica según tu nivel.",
     items: [
-      "Box: técnica y acondicionamiento",
-      "Acondicionamiento físico general",
-      "Preparación Física personalizada",
-      "PF Grupal (clases colectivas)",
+      "Entrenador de básquetbol",
+      "Entrenamiento personalizado",
+      "Box y acondicionamiento",
+      "Preparación física grupal",
     ],
     details: ["Box", "Acondicionamiento general", "PF personalizada", "PF grupal"],
   },
   {
     num: "04",
-    href: "/sicologia",
     title: "SICOLOGÍA DEPORTIVA",
+    infoName: "Sicología Deportiva",
     emoji: "🧠",
     color: "#8B5CF6",
     subtitle: "El juego empieza en la mente",
@@ -80,8 +80,8 @@ const services = [
   },
   {
     num: "05",
-    href: "/nutricion",
     title: "NUTRICIÓN DEPORTIVA",
+    infoName: "Nutrición Deportiva",
     emoji: "🥗",
     color: "#F59E0B",
     subtitle: "Alimentación estratégica para rendir",
@@ -128,7 +128,7 @@ export default function ServicesGrid() {
           <div className="flex items-end justify-between gap-6">
             <div>
               <div className="font-display tracking-wide text-orange text-[13px]">
-                CANCHA / STREET / RENDIMIENTO
+                CANCHA OFICIAL 3×3 · ENTRENADOR · ÑUÑOA
               </div>
               <h2 className="mt-2 font-display text-[48px] leading-none">
                 SERVICIOS
@@ -158,7 +158,12 @@ export default function ServicesGrid() {
 
                 <div className="pointer-events-none absolute inset-0" />
 
-                <Link href={s.href} className="block">
+                <a
+                  href={whatsappUrl(`Necesito más info de ${s.infoName}`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block"
+                >
                   <div className="p-8 relative">
                     <div
                       className="absolute bottom-4 right-4 select-none font-display text-[7rem] leading-[0.85] tracking-wide opacity-[0.04] group-hover:opacity-[0.09]"
@@ -210,11 +215,11 @@ export default function ServicesGrid() {
                         className="inline-flex items-center rounded-full border border-[rgba(255,255,255,0.08)] bg-[rgba(255,255,255,0.02)] px-4 py-2 text-xs font-mono text-gray-400"
                         style={{ borderColor: `${s.color}55` }}
                       >
-                        Ver detalle →
+                        Más info →
                       </div>
                     </div>
                   </div>
-                </Link>
+                </a>
               </motion.div>
             </div>
           ))}

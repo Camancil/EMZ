@@ -66,9 +66,9 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="mt-5 max-w-[46ch] text-[15px] font-[300] text-gray-200"
           >
-            Cancha techada, cultura streetball y entrenamiento serio. Arriendo 3x3,
-            reintegro deportivo, box y preparación física con enfoque en rendimiento
-            y recuperación.
+            Cancha de basketball y básquetbol en Ñuñoa, Santiago. Cancha oficial
+            3x3 techada, arriendo, entrenamiento personalizado y entrenador de
+            básquetbol. Streetball, reintegro y preparación física.
           </motion.p>
 
           <motion.div
@@ -119,7 +119,7 @@ export default function Hero() {
           <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-[rgba(255,90,31,0.22)] bg-black/20 shadow-[0_24px_80px_-20px_rgba(0,0,0,0.85)] ring-1 ring-white/[0.06] md:aspect-auto md:h-[min(520px,56vh)]">
             <Image
               src="/images/cancha-hero.png"
-              alt="Cancha de básquetbol EMZ: aro, tablero y líneas bajo iluminación cálida"
+              alt="Cancha de basketball y básquetbol 3x3 en Ñuñoa, Santiago — EMZ Sport & Fitness"
               fill
               className="object-cover object-center"
               priority

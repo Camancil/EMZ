@@ -7,28 +7,22 @@ import { ExternalLink, Instagram } from "lucide-react";
 
 const INSTAGRAM_HANDLE = "emzsportandfitness";
 const INSTAGRAM_URL = `https://instagram.com/${INSTAGRAM_HANDLE}`;
+const BEHOLD_URL = "https://feeds.behold.so/6zKAoRbzbrpDhJGGtH7U";
 
-type InstagramPost = {
+type BeholdPost = {
   id: string;
-  media_type: string;
-  media_url: string;
-  thumbnail_url?: string;
+  mediaType: "IMAGE" | "VIDEO" | "CAROUSEL_ALBUM";
   permalink: string;
-  caption?: string;
+  prunedCaption?: string;
+  thumbnailUrl?: string;
+  sizes: {
+    medium: { mediaUrl: string };
+    small: { mediaUrl: string };
+  };
 };
 
-function cleanCaption(caption?: string) {
-  const line = caption
-    ?.split("\n")[0]
-    ?.replace(/#\S+/g, "")
-    ?.replace(/\s{2,}/g, " ")
-    ?.trim();
-
-  return line || "Ver en Instagram";
-}
-
 export default function InstagramSection() {
-  const [posts, setPosts] = useState<InstagramPost[]>([]);
+  const [posts, setPosts] = useState<BeholdPost[]>([]);
   const [status, setStatus] = useState<"loading" | "ok" | "error">("loading");
 
   useEffect(() => {
@@ -36,9 +30,9 @@ export default function InstagramSection() {
 
     (async () => {
       try {
-        const res = await fetch("/api/instagram");
+        const res = await fetch(BEHOLD_URL);
         if (!res.ok) throw new Error("feed");
-        const data = (await res.json()) as { posts?: InstagramPost[] };
+        const data = (await res.json()) as { posts?: BeholdPost[] };
         if (!cancelled) {
           setPosts((data.posts ?? []).slice(0, 6));
           setStatus("ok");
@@ -129,9 +123,9 @@ export default function InstagramSection() {
           >
             {posts.map((post) => {
               const src =
-                post.media_type === "VIDEO"
-                  ? (post.thumbnail_url ?? post.media_url)
-                  : post.media_url;
+                post.mediaType === "VIDEO"
+                  ? (post.thumbnailUrl ?? post.sizes.medium.mediaUrl)
+                  : post.sizes.medium.mediaUrl;
 
               return (
                 <motion.a
@@ -146,16 +140,21 @@ export default function InstagramSection() {
                   }}
                   transition={{ duration: 0.55, ease: "easeOut" }}
                 >
+                  {post.mediaType === "VIDEO" ? (
+                    <div className="absolute right-2 top-2 z-10 rounded-full bg-black/60 px-2 py-0.5 font-mono text-[10px] text-white">
+                      ▶ Reel
+                    </div>
+                  ) : null}
                   <Image
                     src={src}
-                    alt={post.caption ?? "Publicación de Instagram"}
+                    alt={post.prunedCaption ?? "Ver en Instagram"}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 flex items-end bg-black/60 p-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <p className="line-clamp-3 font-mono text-xs text-chalk/90">
-                      {cleanCaption(post.caption)}
+                      {post.prunedCaption ?? "Ver en Instagram"}
                     </p>
                   </div>
                 </motion.a>

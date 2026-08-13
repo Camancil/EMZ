@@ -16,12 +16,15 @@ export default function LocationMap() {
           <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
             <div>
               <div className="font-display text-orange text-[13px] tracking-wide">
-                UBICACIÓN
+                CANCHA DE BASKETBALL · ÑUÑOA
               </div>
               <h2 className="mt-2 font-display text-[40px] leading-none md:text-[46px]">
-                CÓMO LLEGAR
+                SANTIAGO
               </h2>
-              <p className="mt-3 max-w-xl font-mono text-sm text-gray-400">{EMZ_ADDRESS}</p>
+              <p className="mt-3 max-w-xl text-sm text-gray-200">
+                Cancha de basketball y básquetbol en {EMZ_ADDRESS}. Cancha oficial
+                3x3 para arriendo y entrenamiento personalizado.
+              </p>
             </div>
             <div className="mt-4 flex flex-wrap gap-3 md:mt-0">
               <Link
@@ -48,7 +51,7 @@ export default function LocationMap() {
           <div className="overflow-hidden rounded-2xl border border-[rgba(255,90,31,0.2)] bg-black/30 shadow-[0_20px_60px_-24px_rgba(0,0,0,0.9)] ring-1 ring-white/[0.06]">
             <div className="relative aspect-[16/10] w-full md:aspect-[21/9]">
               <iframe
-                title={`Mapa: ${EMZ_ADDRESS}`}
+                title="Mapa de la cancha de basketball EMZ en Ñuñoa, Santiago"
                 src={GOOGLE_MAPS_EMBED_URL}
                 className="absolute inset-0 h-full w-full border-0"
                 loading="lazy"

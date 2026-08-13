@@ -39,8 +39,12 @@ export default function HorarioTable() {
                 HORARIOS
               </div>
               <h2 className="mt-2 font-display text-[40px] leading-none">
-                CANCHA EN ACCIÓN
+                CANCHA EN ÑUÑOA
               </h2>
+              <p className="mt-2 max-w-md text-sm text-gray-200">
+                Arriendo de cancha de basketball en Santiago, lunes a sábado de
+                09:00 a 21:30.
+              </p>
             </div>
             <Link
               href={WHATSAPP_URL}

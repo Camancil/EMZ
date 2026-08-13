@@ -1,20 +1,35 @@
+/** URL canónica del sitio. */
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://emzsportandfitness.cl";
+
 /** Dirección física (una sola fuente de verdad para mapa y footer). */
 export const EMZ_ADDRESS = "Pedro Hemrick Ling 782, Ñuñoa, Santiago, Chile";
+export const EMZ_STREET = "Pedro Hemrick Ling 782";
+export const EMZ_COMUNA = "Ñuñoa";
+export const EMZ_CITY = "Santiago";
+export const EMZ_POSTAL_CODE = "7760301";
+export const EMZ_GEO = { latitude: -33.4474, longitude: -70.5828 };
 
 /** Teléfono de contacto (display). */
 export const EMZ_PHONE_DISPLAY = "+56 9 9596 7873";
+export const EMZ_PHONE_E164 = "+56995967873";
+
+export const OG_IMAGE = "/images/cancha-hero.png";
+export const INSTAGRAM_URL = "https://instagram.com/emzsportandfitness";
 
 const whatsappDigits = (process.env.NEXT_PUBLIC_WHATSAPP ?? "56995967873").replace(
   /\D/g,
   "",
 );
 
-const whatsappText = encodeURIComponent(
+export function whatsappUrl(text: string) {
+  return `https://wa.me/${whatsappDigits}?text=${encodeURIComponent(text)}`;
+}
+
+/** Chat de WhatsApp con mensaje inicial de reserva. */
+export const WHATSAPP_URL = whatsappUrl(
   "Hola, quiero reservar en EMZ Sport & Fitness",
 );
-
-/** Chat de WhatsApp con mensaje inicial. */
-export const WHATSAPP_URL = `https://wa.me/${whatsappDigits}?text=${whatsappText}`;
 
 const addressQuery = encodeURIComponent(EMZ_ADDRESS);
 
