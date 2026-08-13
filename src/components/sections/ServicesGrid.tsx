@@ -118,7 +118,7 @@ export default function ServicesGrid() {
   }, []);
 
   return (
-    <section id="servicios" className="relative py-16 md:py-24">
+    <section id="servicios" className="relative scroll-mt-24 py-16 md:py-24">
       <div className="pointer-events-none absolute inset-0 court-grid opacity-60" aria-hidden="true" />
       <div className="pointer-events-none absolute right-[-120px] top-[-60px] opacity-20 hidden lg:block">
         <BasketballSVG size={520} opacity={0.03} />

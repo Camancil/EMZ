@@ -58,13 +58,10 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-2 border-t border-white/5 pt-6 md:flex-row md:items-center md:justify-between">
+        <div className="mt-10 border-t border-white/5 pt-6">
           <div className="text-xs text-gray-400">
             © {new Date().getFullYear()} EMZ Sport & Fitness. Todos los derechos
             reservados.
-          </div>
-          <div className="text-xs text-gray-400">
-            Hecho para cancha: negro crudo, naranja pelota, ritmo NBA.
           </div>
         </div>
       </div>

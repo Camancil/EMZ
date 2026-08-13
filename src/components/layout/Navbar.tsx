@@ -11,11 +11,10 @@ import ScoreBug from "@/components/basketball/ScoreBug";
 
 const links = [
   { href: "/cancha", label: "CANCHA" },
-  { href: "/reintegro", label: "REINTEGRO" },
-  { href: "/entrenamiento", label: "ENTRENAMIENTO" },
-  { href: "/sicologia", label: "SICOLOGÍA" },
-  { href: "/nutricion", label: "NUTRICIÓN" },
-  { href: "/blog", label: "BLOG" },
+  { href: "/#servicios", label: "REINTEGRO" },
+  { href: "/#servicios", label: "ENTRENAMIENTO" },
+  { href: "/#servicios", label: "SICOLOGÍA" },
+  { href: "/#servicios", label: "NUTRICIÓN" },
 ];
 
 export default function Navbar() {
@@ -64,7 +63,7 @@ export default function Navbar() {
         <nav className="hidden items-center gap-6 md:flex">
           {links.map((l) => (
             <Link
-              key={l.href}
+              key={l.label}
               href={l.href}
               className={[
                 "font-display tracking-wide text-[15px] transition-colors",
@@ -140,7 +139,7 @@ export default function Navbar() {
               <div className="mt-6 flex flex-col gap-7">
                 {links.map((l) => (
                   <Link
-                    key={l.href}
+                    key={l.label}
                     href={l.href}
                     onClick={() => setOpen(false)}
                     className={[
