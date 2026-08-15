@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { LOGOS } from "@/lib/brand";
 import {
   EMZ_CITY,
   EMZ_COMUNA,
@@ -104,7 +105,8 @@ export function localBusinessJsonLd() {
     url: SITE_URL,
     telephone: EMZ_PHONE_E164,
     email: undefined,
-    image: `${SITE_URL}${OG_IMAGE}`,
+    logo: `${SITE_URL}${LOGOS.white}`,
+    image: [`${SITE_URL}${OG_IMAGE}`, `${SITE_URL}${LOGOS.white}`],
     address: {
       "@type": "PostalAddress",
       streetAddress: EMZ_STREET,

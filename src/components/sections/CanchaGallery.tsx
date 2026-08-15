@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 import { CANCHA_PHOTOS } from "@/lib/cancha-gallery";
 
 export default function CanchaGallery() {
@@ -54,14 +54,35 @@ export default function CanchaGallery() {
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.55, delay: index * 0.06, ease: "easeOut" }}
           >
-            <Image
-              src={photo.src}
-              alt={photo.alt}
-              width={photo.aspect === "portrait" ? 900 : 1600}
-              height={photo.aspect === "portrait" ? 1350 : 1000}
-              className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            />
+            {photo.type === "video" ? (
+              <div className="relative">
+                <Image
+                  src={photo.poster ?? photo.src}
+                  alt={photo.alt}
+                  width={439}
+                  height={728}
+                  className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
+                <span
+                  className="absolute inset-0 flex items-center justify-center"
+                  aria-hidden="true"
+                >
+                  <span className="inline-flex h-14 w-14 items-center justify-center rounded-full border border-white/25 bg-black/55 text-chalk backdrop-blur-sm">
+                    <Play size={22} fill="currentColor" className="ml-0.5" />
+                  </span>
+                </span>
+              </div>
+            ) : (
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                width={photo.aspect === "portrait" ? 900 : 1600}
+                height={photo.aspect === "portrait" ? 1350 : 1000}
+                className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            )}
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             <div className="absolute bottom-3 left-3 right-3 font-mono text-xs text-chalk/90 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               {photo.caption}
@@ -124,15 +145,28 @@ export default function CanchaGallery() {
               transition={{ duration: 0.25 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <Image
-                src={current.src}
-                alt={current.alt}
-                width={current.aspect === "portrait" ? 900 : 1600}
-                height={current.aspect === "portrait" ? 1350 : 1000}
-                className="mx-auto max-h-[82vh] w-auto rounded-xl object-contain"
-                sizes="90vw"
-                priority
-              />
+              {current.type === "video" ? (
+                <video
+                  src={current.src}
+                  poster={current.poster}
+                  controls
+                  autoPlay
+                  playsInline
+                  className="mx-auto h-auto max-h-[82vh] w-auto max-w-[min(100%,420px)] rounded-xl"
+                >
+                  {current.alt}
+                </video>
+              ) : (
+                <Image
+                  src={current.src}
+                  alt={current.alt}
+                  width={current.aspect === "portrait" ? 900 : 1600}
+                  height={current.aspect === "portrait" ? 1350 : 1000}
+                  className="mx-auto max-h-[82vh] w-auto rounded-xl object-contain"
+                  sizes="90vw"
+                  preload
+                />
+              )}
               <div className="mt-4 text-center font-mono text-sm text-gray-200">
                 {current.caption}
                 <span className="ml-3 text-gray-400">

@@ -1,11 +1,13 @@
-export type CanchaPhoto = {
+export type CanchaMedia = {
   src: string;
   alt: string;
   caption: string;
   aspect: "landscape" | "portrait";
+  type?: "image" | "video";
+  poster?: string;
 };
 
-export const CANCHA_PHOTOS: CanchaPhoto[] = [
+export const CANCHA_PHOTOS: CanchaMedia[] = [
   {
     src: "/images/cancha-hero.png",
     alt: "Cancha de basketball 3x3 EMZ en Ñuñoa de noche, aro y tablero iluminados",
@@ -47,5 +49,13 @@ export const CANCHA_PHOTOS: CanchaPhoto[] = [
     alt: "Entrenamiento personalizado y entrenador de básquetbol en la cancha EMZ Ñuñoa",
     caption: "Entrenamiento en cancha",
     aspect: "portrait",
+  },
+  {
+    src: "/images/video-entrenamiento-basketball.mp4",
+    alt: "Video de entrenamiento de basketball en la cancha EMZ de Ñuñoa",
+    caption: "Entrenamiento de basketball",
+    aspect: "portrait",
+    type: "video",
+    poster: "/images/video-clases-poster.jpg",
   },
 ];

@@ -6,6 +6,7 @@ import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Button from "@/components/ui/Button";
+import EmzLogo from "@/components/ui/EmzLogo";
 import { WHATSAPP_URL } from "@/lib/site";
 import ScoreBug from "@/components/basketball/ScoreBug";
 
@@ -47,15 +48,15 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <Link
             href="/"
-            className="flex items-end gap-1"
+            className="flex items-center"
             aria-label="EMZ Sport & Fitness"
           >
-            <span className="font-display text-[30px] md:text-[34px] leading-none text-chalk">
-              EMZ
-            </span>
-            <span className="font-display text-[18px] md:text-[20px] leading-none text-orange">
-              SPORT
-            </span>
+            <EmzLogo
+              variant="white"
+              preload
+              className="h-14 w-14 object-contain md:h-16 md:w-16"
+              sizes="64px"
+            />
           </Link>
           <ScoreBug />
         </div>
@@ -118,14 +119,10 @@ export default function Navbar() {
               transition={{ type: "tween", duration: 0.25 }}
             >
               <div className="flex items-center justify-between">
-                <div className="flex items-end gap-1">
-                  <span className="font-display text-[34px] leading-none text-chalk">
-                    EMZ
-                  </span>
-                  <span className="font-display text-[20px] leading-none text-orange">
-                    SPORT
-                  </span>
-                </div>
+                <EmzLogo
+                  variant="white"
+                  className="h-16 w-16 object-contain"
+                />
                 <button
                   type="button"
                   onClick={() => setOpen(false)}

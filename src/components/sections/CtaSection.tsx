@@ -1,4 +1,5 @@
 import Link from "next/link";
+import EmzLogo from "@/components/ui/EmzLogo";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
 import { WHATSAPP_URL } from "@/lib/site";
 
@@ -6,6 +7,16 @@ export default function CtaSection() {
   return (
     <section className="relative py-14 md:py-20">
       <div className="pointer-events-none absolute inset-0 court-grid opacity-20" aria-hidden="true" />
+      <div
+        className="pointer-events-none absolute -right-8 bottom-0 hidden opacity-[0.16] md:block"
+        aria-hidden="true"
+      >
+        <EmzLogo
+          variant="whiteTranslucent"
+          decorative
+          className="h-56 w-56 object-contain"
+        />
+      </div>
       <div className="absolute inset-x-0 top-0 h-[1px] bg-[rgba(255,90,31,0.18)]" aria-hidden="true" />
 
       <div className="mx-auto max-w-6xl px-4 relative z-10">

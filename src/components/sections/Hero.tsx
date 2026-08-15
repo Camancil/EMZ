@@ -9,6 +9,7 @@ import CourtLines from "@/components/basketball/CourtLines";
 import BasketballSVG from "@/components/basketball/BasketballSVG";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 import PartnerMarks from "@/components/ui/PartnerMarks";
+import EmzLogo from "@/components/ui/EmzLogo";
 
 const stats = [
   { value: 5, label: "Áreas", prefix: "", suffix: "" },
@@ -34,6 +35,18 @@ export default function Hero() {
 
       <div className="absolute right-[-160px] top-[-90px] -z-0 opacity-100 hidden lg:block">
         <BasketballSVG size={720} opacity={0.04} />
+      </div>
+
+      <div
+        className="pointer-events-none absolute -left-10 top-28 hidden opacity-[0.14] lg:block"
+        aria-hidden="true"
+      >
+        <EmzLogo
+          variant="blackTranslucent"
+          decorative
+          className="h-[420px] w-[420px] object-contain"
+          sizes="420px"
+        />
       </div>
 
       <div className="mx-auto grid max-w-6xl gap-10 px-4 pb-16 md:grid-cols-2 md:items-center md:gap-12 md:pb-24">
@@ -131,6 +144,16 @@ export default function Hero() {
             />
             <div className="absolute left-5 top-5 md:left-6 md:top-6">
               <PartnerMarks className="scale-[1.15] origin-top-left md:scale-[1.25]" />
+            </div>
+            <div
+              className="pointer-events-none absolute right-4 top-4 opacity-80 md:right-5 md:top-5"
+              aria-hidden="true"
+            >
+              <EmzLogo
+                variant="whiteTranslucent"
+                decorative
+                className="h-16 w-16 object-contain drop-shadow-[0_8px_18px_rgba(0,0,0,0.55)] md:h-20 md:w-20"
+              />
             </div>
             <div className="absolute bottom-5 left-5 right-5 md:bottom-8 md:left-8 md:right-auto">
               <Link

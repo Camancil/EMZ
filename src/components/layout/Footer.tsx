@@ -1,4 +1,5 @@
 import Link from "next/link";
+import EmzLogo from "@/components/ui/EmzLogo";
 import { EMZ_ADDRESS, EMZ_PHONE_DISPLAY, INSTAGRAM_URL, WHATSAPP_URL } from "@/lib/site";
 
 export default function Footer() {
@@ -8,10 +9,13 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-12">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <div className="font-display text-[40px] leading-none">
-              <span className="text-chalk">EMZ</span>{" "}
-              <span className="text-orange">SPORT</span>
-            </div>
+            <Link href="/" aria-label="EMZ Sport & Fitness">
+              <EmzLogo
+                variant="white"
+                className="h-20 w-20 object-contain md:h-24 md:w-24"
+                sizes="96px"
+              />
+            </Link>
             <p className="mt-4 text-sm text-gray-200">
               Cancha de basketball y básquetbol en Ñuñoa, Santiago. Cancha oficial
               3x3, entrenamiento personalizado y entrenador de básquetbol.
