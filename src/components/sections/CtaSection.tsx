@@ -15,6 +15,7 @@ export default function CtaSection() {
           variant="whiteTranslucent"
           decorative
           className="h-56 w-56 object-contain"
+          sizes="224px"
         />
       </div>
       <div className="absolute inset-x-0 top-0 h-[1px] bg-[rgba(255,90,31,0.18)]" aria-hidden="true" />

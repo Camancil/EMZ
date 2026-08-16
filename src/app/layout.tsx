@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Bebas_Neue, DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -7,6 +8,27 @@ import WhatsAppBubble from "@/components/layout/WhatsAppBubble";
 import JsonLd from "@/components/seo/JsonLd";
 import { localBusinessJsonLd, SEO_DESCRIPTION_HOME, SEO_TITLE_HOME } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
+
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-display",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  display: "swap",
+  variable: "--font-body",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -60,8 +82,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es-CL" className="h-full antialiased">
-      <body className="min-h-full flex flex-col bg-black text-chalk">
+    <html
+      lang="es-CL"
+      className={`h-full antialiased ${bebasNeue.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
+    >
+      <body
+        className={`${bebasNeue.variable} ${dmSans.variable} ${jetbrainsMono.variable} min-h-full flex flex-col bg-black text-chalk`}
+      >
         <JsonLd data={localBusinessJsonLd()} />
         <div className="relative z-0 flex min-h-screen flex-col">
           <Navbar />

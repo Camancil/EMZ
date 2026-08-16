@@ -53,7 +53,6 @@ export default function Navbar() {
           >
             <EmzLogo
               variant="white"
-              preload
               className="h-14 w-14 object-contain md:h-16 md:w-16"
               sizes="64px"
             />

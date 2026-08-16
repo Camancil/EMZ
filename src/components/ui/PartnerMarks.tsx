@@ -14,7 +14,7 @@ export default function PartnerMarks({ className }: { className?: string }) {
         width={220}
         height={72}
         className="h-9 w-auto md:h-11"
-        priority
+        sizes="176px"
       />
     </div>
   );

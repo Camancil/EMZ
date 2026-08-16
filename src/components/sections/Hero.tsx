@@ -153,6 +153,7 @@ export default function Hero() {
                 variant="whiteTranslucent"
                 decorative
                 className="h-16 w-16 object-contain drop-shadow-[0_8px_18px_rgba(0,0,0,0.55)] md:h-20 md:w-20"
+                sizes="80px"
               />
             </div>
             <div className="absolute bottom-5 left-5 right-5 md:bottom-8 md:left-8 md:right-auto">

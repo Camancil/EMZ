@@ -164,7 +164,6 @@ export default function CanchaGallery() {
                   height={current.aspect === "portrait" ? 1350 : 1000}
                   className="mx-auto max-h-[82vh] w-auto rounded-xl object-contain"
                   sizes="90vw"
-                  preload
                 />
               )}
               <div className="mt-4 text-center font-mono text-sm text-gray-200">
