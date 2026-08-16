@@ -131,11 +131,14 @@ export default function Hero() {
         <div className="relative z-10 order-1 md:order-2">
           <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-[rgba(255,90,31,0.22)] bg-black/20 shadow-[0_24px_80px_-20px_rgba(0,0,0,0.85)] ring-1 ring-white/[0.06] md:aspect-auto md:h-[min(520px,56vh)]">
             <Image
-              src="/images/cancha-hero.png"
-              alt="Cancha de basketball y básquetbol 3x3 en Ñuñoa, Santiago — EMZ Sport & Fitness"
+              src="/images/cancha-hero.webp"
+              alt="Cancha basketball 3x3 EMZ Ñuñoa"
               fill
               className="object-cover object-center"
-              priority
+              priority={true}
+              quality={80}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/2wBDABQODxIPDRQSEBIXFRQYHjIhHhwcHj0sLiQySUBMS0dARkVQWnNiUFVtVkVGZIhlbXd7gYKBTmCNl4x9lnN+gXz/2wBDARUXFx4aHjshITt8U0ZTfHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHz/wAARCAAJABADASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAEC/8QAIRAAAQMEAQUAAAAAAAAAAAAAAQIDEQAEBSESEzFBUXH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFhEAAwAAAAAAAAAAAAAAAAAAAAER/9oADAMBAAIRAxEAPwAtvkcq02EJb5JTsBQmI9bqWtzkrVTpbZJ6pkhW4+bpY7Cto80rER//2Q=="
               sizes="(max-width: 768px) 100vw, 50vw"
             />
             <div
