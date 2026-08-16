@@ -28,7 +28,7 @@ const ogImage = {
   url: OG_IMAGE,
   width: 1200,
   height: 630,
-  alt: "Cancha de basketball 3x3 EMZ en Ñuñoa, Santiago",
+  alt: "Cancha de Basketball 3x3 EMZ Sport & Fitness — Ñuñoa, Santiago",
 };
 
 export function buildMetadata({
@@ -106,7 +106,7 @@ export function localBusinessJsonLd() {
     telephone: EMZ_PHONE_E164,
     email: undefined,
     logo: `${SITE_URL}${LOGOS.white}`,
-    image: [`${SITE_URL}${OG_IMAGE}`, `${SITE_URL}${LOGOS.white}`],
+    image: [OG_IMAGE, `${SITE_URL}${LOGOS.white}`],
     address: {
       "@type": "PostalAddress",
       streetAddress: EMZ_STREET,

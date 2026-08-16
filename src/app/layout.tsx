@@ -6,7 +6,7 @@ import PageTransition from "@/components/layout/PageTransition";
 import WhatsAppBubble from "@/components/layout/WhatsAppBubble";
 import JsonLd from "@/components/seo/JsonLd";
 import { localBusinessJsonLd, SEO_DESCRIPTION_HOME, SEO_TITLE_HOME } from "@/lib/seo";
-import { OG_IMAGE, SITE_URL } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -39,10 +39,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: OG_IMAGE,
+        url: "https://emz.cl/images/cancha-basketball-nunoa.jpg",
         width: 1200,
         height: 630,
-        alt: "Cancha de basketball 3x3 EMZ en Ñuñoa, Santiago",
+        alt: "Cancha de Basketball 3x3 EMZ Sport & Fitness — Ñuñoa, Santiago",
       },
     ],
   },
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SEO_TITLE_HOME,
     description: SEO_DESCRIPTION_HOME,
-    images: [OG_IMAGE],
+    images: ["https://emz.cl/images/cancha-basketball-nunoa.jpg"],
   },
 };
 

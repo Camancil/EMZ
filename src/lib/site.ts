@@ -14,7 +14,7 @@ export const EMZ_GEO = { latitude: -33.4474, longitude: -70.5828 };
 export const EMZ_PHONE_DISPLAY = "+56 9 9596 7873";
 export const EMZ_PHONE_E164 = "+56995967873";
 
-export const OG_IMAGE = "/images/cancha-hero.png";
+export const OG_IMAGE = "https://emz.cl/images/cancha-basketball-nunoa.jpg";
 export const INSTAGRAM_URL = "https://instagram.com/emzsportandfitness";
 
 const whatsappDigits = (process.env.NEXT_PUBLIC_WHATSAPP ?? "56995967873").replace(
