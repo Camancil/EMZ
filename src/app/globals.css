@@ -20,6 +20,7 @@
 
 @theme inline {
   --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-body), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-mono), ui-monospace, monospace;
   --font-display: var(--font-display), sans-serif;
   /* Brand tokens: bare `orange` / `chalk` utilities (e.g. bg-orange, text-chalk) */

@@ -14,13 +14,15 @@ const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-display",
+  preload: true,
 });
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500"],
+  weight: ["300", "400", "500", "700"],
   display: "swap",
   variable: "--font-body",
+  preload: true,
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -28,6 +30,7 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
   display: "swap",
   variable: "--font-mono",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -83,7 +86,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="es-CL"
+      lang="es"
       className={`h-full antialiased ${bebasNeue.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
     >
       <body

@@ -62,16 +62,11 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="mt-6 font-display tracking-wider text-[clamp(4rem,10vw,9rem)] leading-[0.88]"
-          >
+          <h1 className="mt-6 font-display tracking-wider text-[clamp(4rem,10vw,9rem)] leading-[0.88]">
             <span className="text-chalk">ENTRENA.</span>{" "}
             <span className="text-orange">CRECE.</span>{" "}
             <span className="text-chalk">DIVIÉRTETE.</span>
-          </motion.h1>
+          </h1>
 
           <motion.p
             initial={{ opacity: 0, y: -10 }}
