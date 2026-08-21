@@ -2,6 +2,10 @@
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://emzsportandfitness.cl";
 
+/** ID de medición de Google Analytics 4. */
+export const GA_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-E497P629WN";
+
 /** Dirección física (una sola fuente de verdad para mapa y footer). */
 export const EMZ_ADDRESS = "Pedro Hemrick Ling 782, Ñuñoa, Santiago, Chile";
 export const EMZ_STREET = "Pedro Hemrick Ling 782";

@@ -6,6 +6,7 @@ import Footer from "@/components/layout/Footer";
 import PageTransition from "@/components/layout/PageTransition";
 import WhatsAppBubble from "@/components/layout/WhatsAppBubble";
 import JsonLd from "@/components/seo/JsonLd";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import { localBusinessJsonLd, SEO_DESCRIPTION_HOME, SEO_TITLE_HOME } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
@@ -101,6 +102,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <WhatsAppBubble />
+        <GoogleAnalytics />
       </body>
     </html>
   );
