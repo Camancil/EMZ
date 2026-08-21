@@ -93,6 +93,7 @@ export default function RootLayout({
       <body
         className={`${bebasNeue.variable} ${dmSans.variable} ${jetbrainsMono.variable} min-h-full flex flex-col bg-black text-chalk`}
       >
+        <GoogleAnalytics />
         <JsonLd data={localBusinessJsonLd()} />
         <div className="relative z-0 flex min-h-screen flex-col">
           <Navbar />
@@ -102,7 +103,6 @@ export default function RootLayout({
           <Footer />
         </div>
         <WhatsAppBubble />
-        <GoogleAnalytics />
       </body>
     </html>
   );

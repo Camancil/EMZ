@@ -1,22 +1,29 @@
-import Script from "next/script";
 import { GA_MEASUREMENT_ID } from "@/lib/site";
 
+/**
+ * Etiqueta de Google (gtag.js) renderizada en el HTML del servidor.
+ *
+ * Se usan etiquetas <script> nativas en vez de next/script porque la estrategia
+ * "afterInteractive" inyecta el script recién al hidratar, y el detector de
+ * Google (y algunos crawlers) sólo leen el HTML inicial.
+ */
 export default function GoogleAnalytics() {
-  // Evita ensuciar las métricas con tráfico de desarrollo.
-  if (process.env.NODE_ENV !== "production" || !GA_MEASUREMENT_ID) return null;
+  if (!GA_MEASUREMENT_ID) return null;
 
   return (
     <>
-      <Script
+      <script
+        async
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        strategy="afterInteractive"
       />
-      <Script id="gtag-init" strategy="afterInteractive">
-        {`window.dataLayer = window.dataLayer || [];
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${GA_MEASUREMENT_ID}');`}
-      </Script>
+gtag('config', '${GA_MEASUREMENT_ID}');`,
+        }}
+      />
     </>
   );
 }

@@ -1,6 +1,6 @@
 /** URL canónica del sitio. */
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://emzsportandfitness.cl";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://emz.cl";
 
 /** ID de medición de Google Analytics 4. */
 export const GA_MEASUREMENT_ID =
