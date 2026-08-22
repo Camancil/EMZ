@@ -7,6 +7,9 @@ import PageTransition from "@/components/layout/PageTransition";
 import WhatsAppBubble from "@/components/layout/WhatsAppBubble";
 import JsonLd from "@/components/seo/JsonLd";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import GoogleTagManager, {
+  GoogleTagManagerNoScript,
+} from "@/components/analytics/GoogleTagManager";
 import { localBusinessJsonLd, SEO_DESCRIPTION_HOME, SEO_TITLE_HOME } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
 
@@ -93,6 +96,8 @@ export default function RootLayout({
       <body
         className={`${bebasNeue.variable} ${dmSans.variable} ${jetbrainsMono.variable} min-h-full flex flex-col bg-black text-chalk`}
       >
+        <GoogleTagManagerNoScript />
+        <GoogleTagManager />
         <GoogleAnalytics />
         <JsonLd data={localBusinessJsonLd()} />
         <div className="relative z-0 flex min-h-screen flex-col">

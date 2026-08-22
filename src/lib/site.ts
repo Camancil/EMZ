@@ -6,6 +6,10 @@ export const SITE_URL =
 export const GA_MEASUREMENT_ID =
   process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-E497P629WN";
 
+/** ID del contenedor de Google Tag Manager. */
+export const GTM_CONTAINER_ID =
+  process.env.NEXT_PUBLIC_GTM_ID ?? "GTM-MPMVRTKL";
+
 /** Dirección física (una sola fuente de verdad para mapa y footer). */
 export const EMZ_ADDRESS = "Pedro Hemrick Ling 782, Ñuñoa, Santiago, Chile";
 export const EMZ_STREET = "Pedro Hemrick Ling 782";
