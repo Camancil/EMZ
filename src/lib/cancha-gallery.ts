@@ -15,12 +15,6 @@ export const CANCHA_PHOTOS: CanchaMedia[] = [
     aspect: "landscape",
   },
   {
-    src: "/images/cancha-3x3.webp",
-    alt: "Aro de cancha oficial 3x3 de básquetbol en Ñuñoa, Santiago",
-    caption: "Aro 3x3",
-    aspect: "portrait",
-  },
-  {
     src: "/images/cancha-basketball-nunoa.webp",
     alt: "Cancha de basketball al aire libre en Ñuñoa, Santiago, de día",
     caption: "Cancha de día",
@@ -30,12 +24,6 @@ export const CANCHA_PHOTOS: CanchaMedia[] = [
     src: "/images/cancha-basquetbol-nunoa.webp",
     alt: "Cancha de básquetbol 3x3 en Ñuñoa al atardecer con iluminación",
     caption: "Atardecer en la cancha",
-    aspect: "landscape",
-  },
-  {
-    src: "/images/emz-el-inicio.webp",
-    alt: "Fachada de EMZ Sport & Fitness de noche",
-    caption: "El inicio",
     aspect: "landscape",
   },
   {

@@ -12,7 +12,7 @@ import PartnerMarks from "@/components/ui/PartnerMarks";
 import EmzLogo from "@/components/ui/EmzLogo";
 
 const stats = [
-  { value: 5, label: "Áreas", prefix: "", suffix: "" },
+  { value: 3, label: "Pilares", prefix: "", suffix: "" },
   { value: 3, label: "Cancha oficial", prefix: "", suffix: "×3" },
   { value: 1097, label: "Seguidores", prefix: "+", suffix: "" },
   { value: null as number | null, label: "Disponible", staticValue: "Lun–Sáb" },
@@ -62,10 +62,9 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          <h1 className="mt-6 font-display tracking-wider text-[clamp(4rem,10vw,9rem)] leading-[0.88]">
-            <span className="text-chalk">ENTRENA.</span>{" "}
-            <span className="text-orange">CRECE.</span>{" "}
-            <span className="text-chalk">DIVIÉRTETE.</span>
+          <h1 className="mt-6 font-display tracking-wider text-[clamp(3rem,7.5vw,6.5rem)] leading-[0.88]">
+            <span className="text-chalk">DONDE LOS SUEÑOS</span>{" "}
+            <span className="text-orange">SE ENTRENAN</span>
           </h1>
 
           <motion.p
@@ -74,9 +73,8 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.25 }}
             className="mt-5 max-w-[46ch] text-[15px] font-[300] text-gray-200"
           >
-            Cancha de basketball y básquetbol en Ñuñoa, Santiago. Cancha oficial
-            3x3 techada, arriendo, entrenamiento personalizado y entrenador de
-            básquetbol. Streetball, reintegro y preparación física.
+            Plataforma de desarrollo deportivo, personal y de proyectos en
+            Ñuñoa. Cancha oficial 3x3, entrenamiento y un entorno para crecer.
           </motion.p>
 
           <motion.div
@@ -88,8 +86,8 @@ export default function Hero() {
             <Button href={WHATSAPP_URL} variant="primary">
               RESERVAR CANCHA →
             </Button>
-            <Button href="#servicios" variant="outline">
-              VER SERVICIOS
+            <Button href="#pilares" variant="outline">
+              VER PILARES
             </Button>
           </motion.div>
 

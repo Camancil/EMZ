@@ -27,8 +27,8 @@ export default function CtaSection() {
               <div className="font-display text-orange text-[13px] tracking-wide">
                 EMZ MODE
               </div>
-              <h2 className="mt-2 font-display text-[46px] leading-none">
-                ENTRA. JUEGA. MEJORA.
+              <h2 className="mt-2 max-w-[22ch] font-display text-[34px] leading-[0.95] md:text-[46px]">
+                ENTRENAR · DESARROLLAR · CONECTAR · CRECER
               </h2>
             </div>
 
@@ -48,12 +48,12 @@ export default function CtaSection() {
         <RevealOnScroll delayMs={90} className="mt-8">
           <div className="w-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-3">
             <div className="flex whitespace-nowrap animate-[marquee_18s_linear_infinite] text-gray-200">
-              <span className="font-mono text-xs mr-12">
-                🏀 CANCHA BASKETBALL ÑUÑOA • OFICIAL 3x3 • SANTIAGO • ENTRENADOR BÁSQUETBOL •
-              </span>
-              <span className="font-mono text-xs mr-12">
-                🏀 CANCHA BASKETBALL ÑUÑOA • OFICIAL 3x3 • SANTIAGO • ENTRENADOR BÁSQUETBOL •
-              </span>
+              {/* El keyframe desplaza -50%: el contenido son dos mitades idénticas. */}
+              {[0, 1, 2, 3].map((i) => (
+                <span key={i} className="font-mono text-xs mr-12">
+                  🏀 ENTRENAR · DESARROLLAR · CONECTAR · CRECER ·
+                </span>
+              ))}
             </div>
           </div>
         </RevealOnScroll>

@@ -11,11 +11,10 @@ import { WHATSAPP_URL } from "@/lib/site";
 import ScoreBug from "@/components/basketball/ScoreBug";
 
 const links = [
-  { href: "/cancha", label: "CANCHA" },
-  { href: "/#servicios", label: "REINTEGRO" },
-  { href: "/#servicios", label: "ENTRENAMIENTO" },
-  { href: "/#servicios", label: "SICOLOGÍA" },
-  { href: "/#servicios", label: "NUTRICIÓN" },
+  { href: "/rendimiento", label: "RENDIMIENTO" },
+  { href: "/proyectos", label: "PROYECTOS" },
+  { href: "/longevidad", label: "LONGEVIDAD" },
+  { href: "/nosotros", label: "NOSOTROS" },
 ];
 
 export default function Navbar() {

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import EmzLogo from "@/components/ui/EmzLogo";
+import { PILARES } from "@/content/pilares";
 import { EMZ_ADDRESS, EMZ_PHONE_DISPLAY, INSTAGRAM_URL, WHATSAPP_URL } from "@/lib/site";
 
 export default function Footer() {
@@ -20,6 +21,24 @@ export default function Footer() {
               Cancha de basketball y básquetbol en Ñuñoa, Santiago. Cancha oficial
               3x3, entrenamiento personalizado y entrenador de básquetbol.
             </p>
+
+            <nav className="mt-5 flex flex-wrap gap-x-4 gap-y-2" aria-label="Pilares EMZ">
+              {PILARES.map((pilar) => (
+                <Link
+                  key={pilar.slug}
+                  href={pilar.href}
+                  className="font-display text-sm tracking-wide text-chalk/80 hover:text-orange transition-colors"
+                >
+                  {pilar.nombre}
+                </Link>
+              ))}
+              <Link
+                href="/nosotros"
+                className="font-display text-sm tracking-wide text-chalk/80 hover:text-orange transition-colors"
+              >
+                NOSOTROS
+              </Link>
+            </nav>
           </div>
 
           <div className="grid gap-2 text-sm text-gray-200">

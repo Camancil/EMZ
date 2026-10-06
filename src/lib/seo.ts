@@ -24,6 +24,29 @@ export const SEO_TITLE_CANCHA =
 export const SEO_DESCRIPTION_CANCHA =
   "Cancha oficial 3x3 en Ñuñoa, Santiago: arriendo de cancha de basketball y básquetbol, entrenamiento personalizado y entrenador. Galería y reserva por WhatsApp.";
 
+export const SEO_TITLE_RENDIMIENTO =
+  "Entrenamiento y Rendimiento Deportivo Ñuñoa";
+
+export const SEO_DESCRIPTION_RENDIMIENTO =
+  "Entrenar mejor y con un propósito: cancha oficial 3x3, entrenamiento personalizado, box, sicología deportiva y nutrición en Ñuñoa, Santiago.";
+
+export const SEO_TITLE_PROYECTOS =
+  "Proyectos Deportivos · Arriendo de Cancha y Academias";
+
+export const SEO_DESCRIPTION_PROYECTOS =
+  "Tu idea deportiva también necesita entrenamiento para crecer. Arriendo de cancha, espacio para entrenadores y academias en Ñuñoa, Santiago.";
+
+export const SEO_TITLE_LONGEVIDAD =
+  "Longevidad · Reintegro Deportivo y Movimiento Funcional";
+
+export const SEO_DESCRIPTION_LONGEVIDAD =
+  "A veces el objetivo no es rendir más, es estar mejor. Reintegro deportivo, masoterapia y movimiento funcional en Ñuñoa, Santiago.";
+
+export const SEO_TITLE_NOSOTROS = "Nosotros · Plataforma Deportiva en Ñuñoa";
+
+export const SEO_DESCRIPTION_NOSOTROS =
+  "Plataforma de desarrollo deportivo, personal y de proyectos en Ñuñoa. Entrenar, desarrollar, conectar y crecer en EMZ Sport & Fitness.";
+
 const ogImage = {
   url: OG_IMAGE,
   width: 1200,
@@ -194,7 +217,7 @@ export function faqJsonLd() {
   };
 }
 
-export function breadcrumbCanchaJsonLd() {
+export function breadcrumbJsonLd({ name, path }: { name: string; path: string }) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -208,9 +231,16 @@ export function breadcrumbCanchaJsonLd() {
       {
         "@type": "ListItem",
         position: 2,
-        name: "Cancha de basketball Ñuñoa",
-        item: `${SITE_URL}/cancha`,
+        name,
+        item: `${SITE_URL}${path}`,
       },
     ],
   };
+}
+
+export function breadcrumbCanchaJsonLd() {
+  return breadcrumbJsonLd({
+    name: "Cancha de basketball Ñuñoa",
+    path: "/cancha",
+  });
 }

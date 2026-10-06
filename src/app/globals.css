@@ -5,6 +5,8 @@
   --orange: #ff5a1f;
   --orange-glow: rgba(255, 90, 31, 0.2);
   --chalk: #f5f0e8;
+  /* Acento del pilar LONGEVIDAD */
+  --salvia: #8fae8b;
 
   /* NBA palette accents (approx.) */
   --nba-red: #c8102e;
@@ -26,6 +28,7 @@
   /* Brand tokens: bare `orange` / `chalk` utilities (e.g. bg-orange, text-chalk) */
   --color-orange: #ff5a1f;
   --color-chalk: #f5f0e8;
+  --color-salvia: var(--salvia);
   /* NBA utility colors: e.g. bg-nba-red, text-nba-blue */
   --color-nba-red: var(--nba-red);
   --color-nba-blue: var(--nba-blue);

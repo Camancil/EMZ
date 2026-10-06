@@ -1,5 +1,6 @@
 import Hero from "@/components/sections/Hero";
-import ServicesGrid from "@/components/sections/ServicesGrid";
+import PilaresGrid from "@/components/sections/PilaresGrid";
+import ProgramasDestacados from "@/components/sections/ProgramasDestacados";
 import InstagramSection from "@/components/sections/InstagramSection";
 import HorarioTable from "@/components/sections/HorarioTable";
 import LocationMap from "@/components/sections/LocationMap";
@@ -9,7 +10,8 @@ export default function Home() {
   return (
     <div className="relative">
       <Hero />
-      <ServicesGrid />
+      <PilaresGrid />
+      <ProgramasDestacados />
       <InstagramSection />
       <HorarioTable />
       <LocationMap />
