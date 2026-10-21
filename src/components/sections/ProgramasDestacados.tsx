@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import CourtLines from "@/components/basketball/CourtLines";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
@@ -28,11 +29,22 @@ export default function ProgramasDestacados() {
           </h2>
         </RevealOnScroll>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {PROGRAMAS.map((programa, idx) => (
             <RevealOnScroll key={programa.id} delayMs={idx * 90} className="h-full">
-              <article className="group relative flex h-full flex-col overflow-hidden rounded-[8px] border border-[rgba(255,255,255,0.07)] bg-[rgba(255,255,255,0.02)] p-8 transition-colors hover:border-[rgba(255,255,255,0.18)]">
+              <article className="group relative flex h-full flex-col overflow-hidden rounded-[8px] border border-[rgba(255,255,255,0.07)] bg-[rgba(255,255,255,0.02)] p-8 transition-colors hover:border-[rgba(255,255,255,0.18)] @container">
                 <CourtLines variant="threepoint" />
+
+                <div className="relative -mx-8 -mt-8 mb-6 border-b border-white/10 bg-black/40">
+                  <Image
+                    src={programa.imagen}
+                    alt={programa.imagenAlt}
+                    width={820}
+                    height={1024}
+                    className="aspect-[4/5] w-full object-contain"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
 
                 <div className="relative">
                   <span
@@ -53,6 +65,15 @@ export default function ProgramasDestacados() {
                   <p className="mt-3 text-sm leading-relaxed text-gray-200/95">
                     {programa.descripcion}
                   </p>
+
+                  {programa.horario ? (
+                    <div
+                      className="mt-4 inline-flex items-center rounded-full border border-white/10 bg-white/[0.02] px-3 py-1.5 font-mono text-xs"
+                      style={{ color: programa.accent }}
+                    >
+                      {programa.horario}
+                    </div>
+                  ) : null}
                 </div>
 
                 <ul className="relative mt-7 space-y-3">
@@ -74,7 +95,7 @@ export default function ProgramasDestacados() {
                             : "rgba(255,255,255,0.08)",
                         }}
                       >
-                        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                        <div className="flex flex-col gap-4 @sm:flex-row @sm:items-center @sm:justify-between">
                           <div className="min-w-0">
                             {plan.destacado ? (
                               <div
@@ -92,7 +113,7 @@ export default function ProgramasDestacados() {
                             </div>
                           </div>
 
-                          <div className="flex shrink-0 items-center gap-4">
+                          <div className="flex shrink-0 items-center justify-between gap-4">
                             <div className="font-mono text-[17px] text-orange">
                               {clp.format(plan.precio)}
                             </div>

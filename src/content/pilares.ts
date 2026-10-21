@@ -54,6 +54,7 @@ export const PILARES: Pilar[] = [
     chips: [
       "Cancha 3x3",
       "Entrenamiento personalizado",
+      "Woman Performance",
       "Box",
       "Sicología deportiva",
       "Nutrición",
@@ -66,12 +67,17 @@ export const PILARES: Pilar[] = [
       {
         nombre: "Cancha 3x3",
         descripcion:
-          "Cancha oficial 3x3 techada en Ñuñoa. Arriendo libre desde $15.000/hr, sesiones con entrenador desde $25.000 y clases grupales desde $8.000 por persona (mín. 4).",
+          "Cancha oficial 3x3 al aire libre en Ñuñoa, con iluminación. Arriendo libre desde $15.000/hr, sesiones con entrenador desde $25.000 y clases grupales desde $8.000 por persona (mín. 4).",
       },
       {
         nombre: "Entrenamiento personalizado",
         descripcion:
           "Entrenamiento de fuerza, potencia y técnica según tu nivel, con entrenador de básquetbol y preparación física.",
+      },
+      {
+        nombre: "Woman Performance",
+        descripcion:
+          "Entrenamiento exclusivo para mujeres, martes y jueves de 19:00 a 20:00. Grupos reducidos con una profesora que acompaña toda la sesión, trabajando fuerza, rendimiento y tonificación con mancuernas, bandas elásticas, peso corporal e implementos.",
       },
       {
         nombre: "Box",

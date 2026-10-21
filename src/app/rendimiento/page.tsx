@@ -28,8 +28,8 @@ export default function RendimientoPage() {
         <section className="mt-14 rounded-2xl border border-[rgba(255,90,31,0.15)] bg-[rgba(255,90,31,0.04)] px-6 py-5">
           <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
             <div className="text-sm text-gray-200">
-              Cancha oficial 3x3 techada en Ñuñoa: mira el espacio, los horarios
-              y los valores de arriendo.
+              Cancha oficial 3x3 al aire libre en Ñuñoa: mira el espacio, los
+              horarios y los valores de arriendo.
             </div>
             <Link
               href="/cancha"

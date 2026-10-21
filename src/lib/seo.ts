@@ -104,7 +104,7 @@ export function buildMetadata({
 export const CANCHA_FAQS = [
   {
     question: "¿Dónde hay una cancha de basketball en Ñuñoa?",
-    answer: `En EMZ Sport & Fitness, ${EMZ_STREET}, ${EMZ_COMUNA}, ${EMZ_CITY}. Cancha de basketball y básquetbol techada, lista para arriendo y entrenamiento.`,
+    answer: `En EMZ Sport & Fitness, ${EMZ_STREET}, ${EMZ_COMUNA}, ${EMZ_CITY}. Cancha de basketball y básquetbol al aire libre, lista para arriendo y entrenamiento.`,
   },
   {
     question: "¿Tienen cancha oficial 3x3?",
