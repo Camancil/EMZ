@@ -67,7 +67,7 @@ export const PILARES: Pilar[] = [
       {
         nombre: "Cancha 3x3",
         descripcion:
-          "Cancha oficial 3x3 al aire libre en Ñuñoa, con iluminación. Arriendo libre desde $20.000/hr, sesiones con entrenador desde $25.000 y clases grupales desde $8.000 por persona (mín. 4).",
+          "Cancha oficial 3x3 al aire libre en Ñuñoa, con iluminación. Arriendo libre desde $20.000/hr.",
       },
       {
         nombre: "Entrenamiento personalizado",
